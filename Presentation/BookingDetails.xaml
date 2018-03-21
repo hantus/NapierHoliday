@@ -1,0 +1,48 @@
+﻿<Window x:Class="Presentation.BookingDetails"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="BookingDetails" Height="681" Width="658">
+    <Grid x:Name="lblBookingRef" Background="#95B7F2" Margin="0,0,-8,0">
+        <Label Content="Check In:" HorizontalAlignment="Left" Margin="26,16,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+        <Label Content="Check Out:" HorizontalAlignment="Left" Margin="267,16,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+        <DatePicker x:Name="datePickArrival" HorizontalAlignment="Left" Margin="111,16,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="datePickDepart" HorizontalAlignment="Left" Margin="391,16,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnCheckAvail" Content="Check Availablity" HorizontalAlignment="Left" Margin="516,18,0,0" VerticalAlignment="Top" Width="117" FontFamily="Arial Rounded MT Bold" Background="White" Foreground="#407FEE" Click="btnCheckAvail_Click"/>
+        <Label Content="Booking Reference Number:" HorizontalAlignment="Left" Margin="10,111,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+        <Label x:Name="lblBookingRef1" Content="Ref" HorizontalAlignment="Left" Margin="190,111,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.237,-0.385" FontFamily="Arial Rounded MT Bold"/>
+        <Label Content="Customer's Name:" HorizontalAlignment="Left" Margin="10,152,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.079,-0.038" FontFamily="Arial Rounded MT Bold"/>
+        <Label Content="Customer's Address:" HorizontalAlignment="Left" Margin="10,194,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+        <Label x:Name="lblCustName" Content="Name" HorizontalAlignment="Left" Margin="190,150,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.026,0.385" FontFamily="Arial Rounded MT Bold"/>
+        <Label x:Name="lblCustAddress" Content="Address" HorizontalAlignment="Left" Margin="190,192,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.632,-0.154" FontFamily="Arial Rounded MT Bold"/>
+        <ListBox x:Name="listBoxGuests" HorizontalAlignment="Left" Height="138" Margin="10,253,0,0" VerticalAlignment="Top" Width="239" Background="White" SelectionChanged="listBoxGuests_SelectionChanged"/>
+        <Button x:Name="btnAddGuest" Content="Add New Guest" HorizontalAlignment="Left" Margin="10,396,0,0" VerticalAlignment="Top" Width="239" RenderTransformOrigin="-0.427,0.273" FontFamily="Arial Rounded MT Bold" Background="White" Foreground="#407FEE" Click="btnAddGuest_Click"/>
+        <Label x:Name="lblNewName" Content="Name:" HorizontalAlignment="Left" Margin="304,253,0,0" VerticalAlignment="Top" Width="69" FontFamily="Arial Rounded MT Bold"/>
+        <Label x:Name="lblNewPass" Content="Passport Number:" HorizontalAlignment="Left" Margin="304,309,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.105,0.538" FontFamily="Arial Rounded MT Bold"/>
+        <Label x:Name="lblNewAge" Content="Age:" HorizontalAlignment="Left" Margin="304,365,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+        <Button x:Name="btnDelGuest" Content="Delete" HorizontalAlignment="Left" Margin="304,255,0,0" VerticalAlignment="Top" Width="116" FontFamily="Arial Rounded MT Bold"  Background="White" Foreground="#407FEE" Click="btnDelGuest_Click"/>
+        <Button x:Name="btnAmendGuest" Content="Edit" HorizontalAlignment="Left" Margin="304,309,0,0" VerticalAlignment="Top" Width="116" FontFamily="Arial Rounded MT Bold"  Background="White" Foreground="#407FEE" Click="btnAmendGuest_Click"/>
+        <Button x:Name="btnAmendGuestSave" Content="Save Changes" HorizontalAlignment="Left" Margin="304,369,0,0" VerticalAlignment="Top" Width="116" FontFamily="Arial Rounded MT Bold"  Background="White" Foreground="#407FEE" Click="btnAmengGuestSave_Click"/>
+        <TextBox x:Name="txtBoxEditName" HorizontalAlignment="Left" Height="23" Margin="441,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192"/>
+        <TextBox x:Name="txtBoxEditPassp" HorizontalAlignment="Left" Height="23" Margin="441,306,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192"/>
+        <TextBox x:Name="txtBoxEditAge" HorizontalAlignment="Left" Height="23" Margin="441,365,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192"/>
+        <Button x:Name="btnCnlNewGuest" Content="Cancel" HorizontalAlignment="Left" Margin="441,396,0,0" VerticalAlignment="Top" Width="90" FontFamily="Arial Rounded MT Bold"  Background="White" Foreground="#407FEE" Click="btnCnlNewGuest_Click"/>
+        <Button x:Name="btnNewGuestConf" Content="Add" HorizontalAlignment="Left" Margin="543,396,0,0" VerticalAlignment="Top" Width="90" FontFamily="Arial Rounded MT Bold"  Background="White" Foreground="#407FEE" Click="btnNewGuestConf_Click"/>
+        <CheckBox x:Name="checkBoxEvMeal" Content="Evening Meal" HorizontalAlignment="Left" Margin="165,441,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+        <CheckBox x:Name="checkBoxBreakfast" Content="Breakfast" HorizontalAlignment="Left" Margin="17,440,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+        <CheckBox x:Name="checkBoxCarHire" Content="Car Hire" HorizontalAlignment="Left" Margin="326,441,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" Checked="checkBoxCarHire_Checked" Unchecked="checkBoxCarHire_Unchecked"/>
+        <DatePicker x:Name="datePickHireStart" HorizontalAlignment="Left" Margin="513,435,0,0" VerticalAlignment="Top" Width="120"/>
+        <DatePicker x:Name="datePickHireEnd" HorizontalAlignment="Left" Margin="513,475,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lblHireFrom" Content="From:" HorizontalAlignment="Left" Margin="441,435,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+        <Label x:Name="lblHireTo" Content="To:" HorizontalAlignment="Left" Margin="441,473,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+        <Label x:Name="lblDriver" Content="Driver:" HorizontalAlignment="Left" Margin="441,521,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+        <ComboBox x:Name="comBoxDriver" HorizontalAlignment="Left" Margin="513,521,0,0" VerticalAlignment="Top" Width="120" Background="White"/>
+        <ComboBox x:Name="comBoxChaletId" HorizontalAlignment="Left" Margin="83,521,0,0" VerticalAlignment="Top" Width="59" Background="White"/>
+        <Label x:Name="lblChaletId" Content="Chalet Id:" HorizontalAlignment="Left" Margin="10,521,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+        <Button x:Name="btnCancel" Content="Delete Booking" HorizontalAlignment="Left" Margin="10,597,0,0" VerticalAlignment="Top" Width="150"  FontFamily="Arial Rounded MT Bold"  Background="White" Foreground="#407FEE" Click="btnCancel_Click_1"/>
+        <Button x:Name="btnInvoice" Content="Show Invoice" HorizontalAlignment="Left" Margin="165,597,0,0" VerticalAlignment="Top" Width="150"  FontFamily="Arial Rounded MT Bold"  Background="White" Foreground="#407FEE" Click="btnInvoice_Click"/>
+        <Button x:Name="btnEdit" Content="Edit Booking" HorizontalAlignment="Left" Margin="323,597,0,0" VerticalAlignment="Top" Width="150"  FontFamily="Arial Rounded MT Bold"  Background="White" Foreground="#407FEE" Click="btnEdit_Click"/>
+        <Button x:Name="btnSaveCh" Content="Save Changes" HorizontalAlignment="Left" Margin="478,597,0,0" VerticalAlignment="Top" Width="150"  FontFamily="Arial Rounded MT Bold"  Background="White" Foreground="#407FEE" Click="btnSaveCh_Click"/>
+
+    </Grid>
+
+</Window>

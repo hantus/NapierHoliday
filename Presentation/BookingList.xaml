@@ -1,0 +1,15 @@
+﻿<Window x:Class="Presentation.BookingList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="BookingList" Height="300" Width="562">
+    <Grid Background="#95B7F2">
+        <ListView x:Name="listViewBookings" Background="#95B7F2" HorizontalAlignment="Left" Height="250" Margin="10,10,0,0" VerticalAlignment="Top" Width="534" SelectionChanged="listViewBookings_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</Window>
